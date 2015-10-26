@@ -3,6 +3,7 @@
 #General Prerequisites
 
 •	Graylog installation
+
 •	Oracle Installation
 
 #Installation/Setting

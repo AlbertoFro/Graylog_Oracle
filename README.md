@@ -14,6 +14,8 @@
 
 3.	Or download my archive logstash.tar here https://www.dropbox.com/s/qmem5ph7i4tn9gx/logstash.tar?dl=0 (orasql.rb lib it's included) for further details http://krisrice.blogspot.it/2015/05/logstash-and-oracle-database.html
 
-4.	Create logstash.conf
+4.  Create orasql.rb file
 
-5.	Create  logstash service on linux enviroment (service logstash start/stop) logstash file /etc/init.d
+5.	Create logstash.conf
+
+6.	Create  logstash service on linux enviroment (service logstash start/stop) logstash file /etc/init.d

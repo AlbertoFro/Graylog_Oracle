@@ -20,3 +20,5 @@
 5.	Create logstash.conf
 
 6.	Create  logstash service on linux enviroment (service logstash start/stop) logstash file /etc/init.d
+
+7.	Check SQL message in graylog server

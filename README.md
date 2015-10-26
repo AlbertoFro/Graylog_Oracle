@@ -1,5 +1,7 @@
 # Graylog_Oracle
 
+#Pippo
+
 (1) Create SASHNOW View
 
 (2) download/install logstash with root (user or privilegies) (tested on logstash-1.4.2)  https://www.elastic.co/downloads/past-releases/logstash-1-4-2-2?q=logstash-1.4.2

@@ -4,7 +4,8 @@
 
 (2) download/install logstash with root (user or privilegies) (tested on logstash-1.4.2)  https://www.elastic.co/downloads/past-releases/logstash-1-4-2-2?q=logstash-1.4.2
 	
-(3) Or download logstash.tar (orasql.rb lib included) for further details http://krisrice.blogspot.it/2015/05/logstash-and-oracle-database.html
+(3) Or download logstash.tar here https://www.dropbox.com/s/qmem5ph7i4tn9gx/logstash.tar?dl=0 ,orasql.rb lib it's included 
+for further details http://krisrice.blogspot.it/2015/05/logstash-and-oracle-database.html
 
 (4) logstash.conf
 

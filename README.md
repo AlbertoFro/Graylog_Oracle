@@ -1,12 +1,11 @@
 # Graylog_Oracle
 
 #General Prerequisites
-    
-#General Prerequisites
 
 •	Graylog installation
 •	Oracle Installation
 
+#Installation/Setting
     
 
 1.	Create SASHNOW View

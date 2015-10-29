@@ -21,4 +21,6 @@
 
 6.	Create  logstash service on linux enviroment (service logstash start/stop) logstash file /etc/init.d
 
-7.	Check SQL message in graylog server
+7.	Download and insta Oracle content Pack Dashboard.json in Graylog
+
+8.	Check SQL message in graylog server

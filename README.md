@@ -17,7 +17,7 @@
 
 4.  Create orasql.rb file
 
-5.	Create logstash.conf
+5.	Create logstash.conf and set your ip_address_graylog_server in the appropriate section.
 
 6.	Create  logstash service on linux enviroment (service logstash start/stop) logstash file /etc/init.d
 

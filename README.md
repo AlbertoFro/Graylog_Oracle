@@ -28,7 +28,7 @@
 
 ![gray3_ok](https://cloud.githubusercontent.com/assets/1419572/10816928/af3c898a-7e36-11e5-9d47-415f9a775340.PNG)
 
-9. Importing content Pack Dashboard.json in Graylog you can see Oracle Dashboard
+Last Step: Importing content Pack Dashboard.json in Graylog you can see Oracle Dashboard
 
 ![gray2_ok](https://cloud.githubusercontent.com/assets/1419572/10816934/b91b6b6a-7e36-11e5-878f-a8fb630e2dc8.PNG)
 

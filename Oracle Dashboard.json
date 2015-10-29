@@ -1,0 +1,217 @@
+{
+  "id" : null,
+  "name" : "Oracle Dashboard",
+  "description" : "Oracle Dashboard",
+  "category" : "Oracle Dashboard",
+  "inputs" : [ {
+    "title" : "Logstash",
+    "configuration" : {
+      "port" : 12203,
+      "override_source" : "",
+      "bind_address" : "0.0.0.0",
+      "recv_buffer_size" : 10485760
+    },
+    "type" : "org.graylog2.inputs.gelf.udp.GELFUDPInput",
+    "global" : false,
+    "extractors" : [ {
+      "title" : "duration_ms_af",
+      "type" : "SUBSTRING",
+      "configuration" : {
+        "end_index" : 8,
+        "begin_index" : 0
+      },
+      "converters" : [ {
+        "type" : "NUMERIC",
+        "configuration" : { }
+      } ],
+      "order" : 0,
+      "cursor_strategy" : "COPY",
+      "target_field" : "duration_ms_af",
+      "source_field" : "http_request_duration_ms",
+      "condition_type" : "NONE",
+      "condition_value" : ""
+    }, {
+      "title" : "wait_time_num",
+      "type" : "COPY_INPUT",
+      "configuration" : { },
+      "converters" : [ {
+        "type" : "NUMERIC",
+        "configuration" : { }
+      } ],
+      "order" : 0,
+      "cursor_strategy" : "CUT",
+      "target_field" : "wait_time_num",
+      "source_field" : "wait_time",
+      "condition_type" : "NONE",
+      "condition_value" : ""
+    }, {
+      "title" : "http_session_id_c",
+      "type" : "COPY_INPUT",
+      "configuration" : { },
+      "converters" : [ {
+        "type" : "NUMERIC",
+        "configuration" : { }
+      } ],
+      "order" : 0,
+      "cursor_strategy" : "COPY",
+      "target_field" : "http_session_id_c",
+      "source_field" : "http_session_id",
+      "condition_type" : "NONE",
+      "condition_value" : ""
+    } ],
+    "static_fields" : { }
+  } ],
+  "streams" : [ ],
+  "outputs" : [ ],
+  "dashboards" : [ {
+    "title" : "Oracle Dashboard",
+    "description" : "Oracle Dashboard",
+    "dashboard_widgets" : [ {
+      "description" : "Session_state quick values",
+      "type" : "QUICKVALUES",
+      "configuration" : {
+        "field" : "session_state",
+        "query" : "message: SELECT",
+        "show_data_table" : true,
+        "timerange" : {
+          "range" : 900,
+          "type" : "relative"
+        },
+        "show_pie_chart" : true
+      },
+      "col" : 2,
+      "row" : 2,
+      "cache_time" : 10
+    }, {
+      "description" : "Program quick values",
+      "type" : "QUICKVALUES",
+      "configuration" : {
+        "field" : "program",
+        "query" : "message: SELECT",
+        "show_data_table" : true,
+        "timerange" : {
+          "range" : 900,
+          "type" : "relative"
+        },
+        "show_pie_chart" : true
+      },
+      "col" : 2,
+      "row" : 5,
+      "cache_time" : 10
+    }, {
+      "description" : "Machine quick values",
+      "type" : "QUICKVALUES",
+      "configuration" : {
+        "field" : "machine",
+        "query" : "message: SELECT",
+        "show_data_table" : true,
+        "timerange" : {
+          "range" : 900,
+          "type" : "relative"
+        },
+        "show_pie_chart" : true
+      },
+      "col" : 3,
+      "row" : 4,
+      "cache_time" : 10
+    }, {
+      "description" : "Sql_id quick values",
+      "type" : "QUICKVALUES",
+      "configuration" : {
+        "field" : "sql_id",
+        "query" : "message: SELECT",
+        "show_data_table" : true,
+        "timerange" : {
+          "range" : 900,
+          "type" : "relative"
+        },
+        "show_pie_chart" : true
+      },
+      "col" : 4,
+      "row" : 1,
+      "cache_time" : 10
+    }, {
+      "description" : "Wait_time Max value",
+      "type" : "STATS_COUNT",
+      "configuration" : {
+        "field" : "wait_time",
+        "trend" : true,
+        "query" : "message: SELECT",
+        "timerange" : {
+          "range" : 900,
+          "type" : "relative"
+        },
+        "lower_is_better" : true,
+        "stats_function" : "max"
+      },
+      "col" : 1,
+      "row" : 1,
+      "cache_time" : 10
+    }, {
+      "description" : "time_waited  Max value",
+      "type" : "STATS_COUNT",
+      "configuration" : {
+        "field" : "time_waited",
+        "trend" : true,
+        "query" : "message: SELECT",
+        "timerange" : {
+          "range" : 900,
+          "type" : "relative"
+        },
+        "lower_is_better" : true,
+        "stats_function" : "max"
+      },
+      "col" : 2,
+      "row" : 1,
+      "cache_time" : 10
+    }, {
+      "description" : "Wait_class quick values",
+      "type" : "QUICKVALUES",
+      "configuration" : {
+        "field" : "wait_class",
+        "query" : "message: SELECT",
+        "show_data_table" : true,
+        "timerange" : {
+          "range" : 900,
+          "type" : "relative"
+        },
+        "show_pie_chart" : true
+      },
+      "col" : 4,
+      "row" : 4,
+      "cache_time" : 10
+    }, {
+      "description" : "Sql_text quick values",
+      "type" : "QUICKVALUES",
+      "configuration" : {
+        "field" : "sql_text",
+        "query" : "",
+        "show_data_table" : true,
+        "timerange" : {
+          "range" : 300,
+          "type" : "relative"
+        },
+        "show_pie_chart" : true
+      },
+      "col" : 1,
+      "row" : 2,
+      "cache_time" : 10
+    }, {
+      "description" : "RAC ID",
+      "type" : "QUICKVALUES",
+      "configuration" : {
+        "field" : "inst_id",
+        "query" : "",
+        "show_data_table" : true,
+        "timerange" : {
+          "range" : 300,
+          "type" : "relative"
+        },
+        "show_pie_chart" : true
+      },
+      "col" : 3,
+      "row" : 1,
+      "cache_time" : 10
+    } ]
+  } ]
+}

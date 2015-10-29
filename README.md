@@ -24,4 +24,18 @@
 7.	Download and install Oracle content Pack Dashboard.json in Graylog
 
 8.	Check SQL message in graylog server
+	
+
+![gray3_ok](https://cloud.githubusercontent.com/assets/1419572/10816928/af3c898a-7e36-11e5-9d47-415f9a775340.PNG)
+
+9. Importing content Pack Dashboard.json in Graylog you can see Oracle Dashboard
+
+![gray2_ok](https://cloud.githubusercontent.com/assets/1419572/10816934/b91b6b6a-7e36-11e5-878f-a8fb630e2dc8.PNG)
+
+
+![gray1_ok](https://cloud.githubusercontent.com/assets/1419572/10816935/bc4ceb6a-7e36-11e5-99f9-c81166b9ad28.PNG)
+
+
+
+
 

@@ -24,3 +24,4 @@
 7.	Download and install Oracle content Pack Dashboard.json in Graylog
 
 8.	Check SQL message in graylog server
+
